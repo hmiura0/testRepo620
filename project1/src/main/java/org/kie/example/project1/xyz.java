@@ -9,8 +9,11 @@ public class xyz implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Name")
+   @org.kie.api.definition.type.Label("Name")
    private java.lang.String name;
+
+   @org.kie.api.definition.type.Label(value = "id")
+   private java.lang.Integer id;
 
    public xyz()
    {
@@ -26,9 +29,20 @@ public class xyz implements java.io.Serializable
       this.name = name;
    }
 
-   public xyz(java.lang.String name)
+   public java.lang.Integer getId()
+   {
+      return this.id;
+   }
+
+   public void setId(java.lang.Integer id)
+   {
+      this.id = id;
+   }
+
+   public xyz(java.lang.String name, java.lang.Integer id)
    {
       this.name = name;
+      this.id = id;
    }
 
 }
